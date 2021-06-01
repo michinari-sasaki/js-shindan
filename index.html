@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/destyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="icon" href="" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>ハンターハンターキャラクター診断</title>
+  </head>
+  <body>
+    <div class="open_bg" id="open_bg"></div>
+    <header class="header">
+      <div class="header__inner">
+        <img src="img/fv.png" alt="hunterhunter" />
+      </div>
+    </header>
+    <section class="content">
+      <div class="inner">
+        <h1 class="content__heading">HUNTER×HUNTER<br />キャラクター診断</h1>
+        <p class="content__lead">
+          全10問の簡単な質問で<br />あなたはどのキャラクターか診断します！
+        </p>
+        <p class="content__start_btn" id="start_btn">診断スタート</p>
+      </div>
+    </section>
+
+    <section class="modal" id="modal">
+      <div class="modal__inner">
+        <span id="close_btn">×</span>
+        <h2 class="modal__heading">HUNTER×HUNTER キャラクター診断</h2>
+        <!--▼▼▼ 質問 ▼▼▼-->
+        <div class="modal__question" id="modal__question">
+          <p class="modal__question__number" id="modal__question__number">
+            10/10
+          </p>
+          <div class="modal__question__content">
+            <p class="modal__question__title" id="modal__question__title">
+              質問のテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <div class="modal__question__btns">
+              <button>回答01</button>
+              <button>回答02</button>
+              <button>回答03</button>
+            </div>
+          </div>
+        </div>
+        <!--▲▲▲ 質問 ▲▲▲-->
+
+        <!--▼▼▼ 結果 ▼▼▼-->
+        <div class="modal__result" id="modal__result">
+          <div class="modal__result__content">
+            <div class="modal__result__tmb">
+              <span><img id="characterTmb" src="" alt="" /></span>
+            </div>
+            <p class="modal__result__name">
+              あなたは<br /><span id="characterName">キャラの名前</span>です！
+            </p>
+            <p class="modal__result__explain" id="characterExplain">
+              説明文です説明文です説明文です説明文です説明文です
+            </p>
+            <p class="modal__result__btn" id="restart__btn">もう一回診断する</p>
+          </div>
+        </div>
+        <!--▲▲▲ 結果 ▲▲▲-->
+      </div>
+    </section>
+
+    <script src="js/function.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

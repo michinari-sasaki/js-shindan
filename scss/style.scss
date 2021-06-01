@@ -1,0 +1,315 @@
+$white: #fff;
+$black: #111;
+$pink: #ff7373;
+$blue: #73daff;
+$blue_gray: #e6eff2;
+$gray: #999;
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-size: 10px;
+  overflow-x: hidden;
+}
+body {
+  background: $blue;
+  font-size: 10px;
+  overflow-x: hidden;
+  word-break: break-all;
+  line-height: 1.4;
+  color: $black;
+}
+img {
+  max-width: 100%;
+}
+@mixin font-robo {
+  font-family: "Roboto", sans-serif;
+}
+.open_bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 87, 102, 0.6);
+  z-index: 1;
+}
+.header {
+  overflow: hidden;
+  background: url(../img/bg.png) no-repeat center top;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &::before {
+    content: "";
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -5;
+  }
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    @media screen and(max-width:1280px) {
+      max-width: 500px;
+    }
+  }
+}
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+  @media screen and(max-width:1280px) {
+    max-width: 500px;
+  }
+}
+
+.content {
+  &__heading {
+    margin-top: 40px;
+    font-size: 5.6rem;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    line-height: 1.2;
+    @media screen and(max-width:1280px) {
+      font-size: 3.2rem;
+    }
+  }
+  &__lead {
+    margin-top: 24px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__start_btn {
+    max-width: 416px;
+    font-size: 4.3rem;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    margin: 54px auto 0;
+    display: block;
+    background: $pink;
+    border-radius: 32px;
+    border: 2px solid #ff5959;
+    transition: 0.2s linear;
+    @media screen and(max-width:1280px) {
+      width: 80%;
+      padding: 8px 16px;
+      font-size: 2.4rem;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  max-height: 720px;
+  background: $white;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 9;
+  @media screen and(max-width:1280px) {
+    width: 50%;
+    height: auto;
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__heading {
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: bold;
+    background: $blue;
+    color: $white;
+    padding: 24px 16px;
+    @media screen and(max-width:1280px) {
+      font-size: 2.2rem;
+      padding: 16px 16px;
+      line-height: 1.4;
+    }
+  }
+  &__question {
+    //display: none;
+    &__number {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #e6eff2;
+      color: #111;
+      font-size: 3rem;
+      margin: -16px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include font-robo;
+      @media screen and(max-width:1280px) {
+        margin: -10px auto;
+        width: 58px;
+        height: 58px;
+        font-size: 1.6rem;
+      }
+    }
+    &__content {
+      padding: 0 80px;
+      @media screen and(max-width:1280px) {
+        padding: 0 16% 48px;
+      }
+      @media screen and(max-width:414px) {
+        padding: 0 8% 32px;
+      }
+    }
+    &__title {
+      margin: 40px auto 0;
+      font-size: 3.2rem;
+      font-weight: bold;
+      text-align: center;
+      @media screen and(max-width:1280px) {
+        margin: 40px auto 0;
+        font-size: 2.2rem;
+      }
+      @media screen and(max-width:768px) {
+        margin: 24px auto 0;
+      }
+    }
+    &__btns {
+      margin-top: 32px;
+      @media screen and(max-width:768px) {
+        margin-top: 16px;
+      }
+      button {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px;
+        font-size: 2.4rem;
+        color: $pink;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 auto;
+        display: block;
+        background: $white;
+        border-radius: 32px;
+        border: 2px solid $pink;
+        transition: 0.2s linear;
+        @media screen and(max-width:1280px) {
+          max-width: 320px;
+          font-size: 1.6rem;
+          padding: 8px 16px;
+        }
+        &:not(:first-of-type) {
+          margin-top: 16px;
+          @media screen and(max-width:1280px) {
+            margin-top: 10px;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__result {
+    display: none;
+    &__content {
+      padding: 0 160px;
+      @media screen and(max-width:1280px) {
+        padding: 0 16% 48px;
+      }
+      @media screen and(max-width:414px) {
+        padding: 0 8% 32px;
+      }
+    }
+    &__tmb {
+      margin: 32px auto 0;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      @media screen and(max-width:1280px) {
+        width: 160px;
+        height: 160px;
+      }
+    }
+    &__name {
+      margin: 16px auto 0;
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+      span {
+        display: inline-block;
+        font-size: 4rem;
+        margin: 0 8px;
+      }
+    }
+    &__explain {
+      max-width: 298px;
+      margin: 16px auto 0;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+    &__btn {
+      max-width: 416px;
+      font-size: 2.4rem;
+      color: $white;
+      text-align: center;
+      font-weight: bold;
+      margin: 40px auto 0;
+      display: block;
+      background: $pink;
+      border-radius: 32px;
+      border: 2px solid #ff5959;
+      transition: 0.2s linear;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.active {
+  display: block;
+}
+.inactive {
+  display: none;
+}
+
+#close_btn {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  font-size: 3rem;
+  line-height: 1;
+  color: $gray;
+  @media screen and(max-width:1280px) {
+    right: 8px;
+    bottom: 8px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
