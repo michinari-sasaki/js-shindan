@@ -7,7 +7,7 @@
 個人利用のハンターハンターのキャラクター診断コンテンツです。  
 
 ## 公開URL  
-https://fast-beach-10367.herokuapp.com/  
+https://pedantic-kalam-d23ea7.netlify.app/
 
 
 ## 実行
